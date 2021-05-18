@@ -1,0 +1,37 @@
+    <% layout('layouts/boilerplate') %> 
+    <div class="row">
+        <h1 class="text-center">New Trail</h1>
+        <div class="col-6 offset-3">
+            <form action="/hikeTrails" method="POST">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="trails[title]">
+                </div>
+            
+                <div class="mb-3">
+                    <label class="form-label" for="title">Location</label>
+                    <input class="form-control" type="text" id="location" name="trails[location]">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Image Url</label>
+                    <input class="form-control" type="text" id="image" name="trails[image]">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="difficultyLevel">Difficulty</label>
+                    <select class="form-select" aria-label="Default select example" id="difficultyLevel" name="trails[difficultyLevel]">
+                        <option selected>select difficulty</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="Difficult">Difficult</option>
+                      </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" id="description" rows="3" name="trails[description]"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Trail</button>
+                </div>
+            </form>
+        </div>
+    </div>
